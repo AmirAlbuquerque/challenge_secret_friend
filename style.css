@@ -1,7 +1,7 @@
 :root {
     --color-primary: #4B69FD;
     --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
+    --color-tertiary: #5A5A5A;
     --color-button: #fe652b;
     --color-button-hover: #e55720;
     --color-text: #444444;
@@ -17,10 +17,11 @@
 
 body {
     height: 100vh;
-    background-color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url("assets/background.png");
+    background-size: auto;
+    background-position: center top;
+    background-repeat: repeat;
 }
 
 .main-content {
@@ -43,7 +44,7 @@ body {
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
-    border: 1px solid #000;
+    border: 1px solid #000000;
     border-radius: 64px 64px 0 0;
     display: flex;
     flex-direction: column;
@@ -54,7 +55,7 @@ body {
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
+    font-size: 60px;
     font-family: "Merriweather", serif;
     font-weight: 900;
     font-style: italic;
@@ -75,7 +76,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin-top: 20px;
 }
 
@@ -83,8 +84,17 @@ body {
     width: 100%;
     padding: 10px;
     border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
+    border-radius: 15px 0px 0px 15px;
     font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-email {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .button-container {
@@ -110,19 +120,21 @@ button {
     font-family: "Inter", sans-serif;
     font-size: 16px;
     border: 2px solid #000;
-    border-radius: 25px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
 .button-add {
     background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border-radius: 0 25px 25px 0;
+    color: var(--color-white);
+    transition: background 0.3s ease-in-out;
+    border-radius: 0 15px 15px 0;
 }
 
 .button-add:hover {
     background-color: #a1a1a1;
+    transform: scale(1.025);
 }
 
 /* Listas */
@@ -132,14 +144,17 @@ ul {
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 .result-list {
     margin-top: 15px;
     color: #05DF05;
-    font-size: 22px;
+    font-size: 35px;
     font-weight: bold;
     text-align: center;
+    border-style: hidden;
 }
 
 /* Botão de sortear título */
@@ -151,6 +166,7 @@ ul {
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    transition: background 0.3s ease-in-out;
 }
 
 .button-draw img {
@@ -159,4 +175,56 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+    transform: scale(1.025);
+}
+
+.sound-button {
+    position: absolute;
+    top: 10px;  /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+.sound-button img {
+    width: 20px;  /* Ajuste o tamanho do ícone */
+    height: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.sound-button:hover img {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.img-reduzida{
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-left: 75px;
+    background-color: var(--color-secondary);
+    border-radius: 500px;
+}
+
+@media (max-width: 768px) {
+    .input-wrapper {
+        flex-direction: column;
+    }
+    .input-name {
+        width: 100%;
+    }
+    .button-add {
+        width: 100%;
+    }
 }

@@ -12,18 +12,26 @@
 
 <body>
     <main class="main-content">
+
         <header class="header-banner">
             <h1 class="main-title">Amigo Secreto</h1>
-            <img src="assets/amigo-secreto.png" alt="Imagem representativa de amigo secreto">
+            <img class="img-reduzida" src="assets/gift_box.png" alt="Imagem representativa de amigo secreto">
         </header>
         
+        
+
         <section class="input-section">
             <h2 class="section-title">Digite o nome dos seus amigos</h2>
             <div class="input-wrapper">
-                <input type="text" id="amigo" class="input-name" placeholder="Digite um nome" onkeydown="if(event.key === 'Enter') adicionarAmigo()">
+                <input type="text" id="nome" class="input-name" placeholder="Digite um nome" onkeydown="if(event.key === 'Enter') adicionarAmigo()">
+                <input type="text" id="email" class="input-email" placeholder="Digite o e-mail" onkeydown="if(event.key === 'Enter') adicionarAmigo()">
                 <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
             </div>
            
+            <button id="Leitura" class="sound-button" onclick="leituraDinamica()">
+                <img src="assets/sound-icon.png" alt="Ícone de som">
+            </button>
+
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
@@ -35,7 +43,10 @@
             </div>
         </section>
     </main>
-
     <script src="app.js" defer></script>
+    <footer class = footer>
+        <p> Desenvolvido por <a href="https://www.linkedin.com/in/amir-albuquerque/" target="_blank">Amir Albuquerque</a> | Imagem obtido por 
+            <a href="https://br.freepik.com/" target="_blank">freepik</a> e <a href="https://pt.pngtree.com/" target="_blank">pngtree</a></p>
+    </footer>
 </body>
 </html>
