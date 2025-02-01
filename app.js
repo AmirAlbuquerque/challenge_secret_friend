@@ -46,7 +46,7 @@ function embaralharAmigos(lista) {
 //Função para exibir o resultado
 function sortearAmigo(amigos){
     if (listaSorteio.length < 2){  
-        alert("Favor adcionar pelo menos 3 amigos!");
+        alert("Favor adcionar pelo menos 2 amigos!");
         return null;
     }
     /*else{
