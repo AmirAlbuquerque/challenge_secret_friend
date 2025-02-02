@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+const { text } = require("body-parser");
 
 const app = express();
 app.use(express.json());
@@ -32,7 +33,7 @@ app.post("/enviar-email", async (req, res) => {
                 from: process.env.EMAIL_USER,
                 to: email, // E-mail do destinatário
                 subject: "Sorteio de Amigo Secreto 🎁",
-                text: `Olá ${nome},\n\nVocê tirou: ${sorteado}!!\n\nBoa sorte e boas festas!`
+                text: `Olá, [Nome]! 👋 \n\nO momento tão esperado chegou... e temos o resultado do seu amigo secreto! 🎉\n\nVocê tirou: ${sorteado}! 🤩\n\nAgora é hora de se preparar para a grande surpresa, que tal? 💖 Que essa troca de presentes seja repleta de alegria e boas vibrações! 🌟\nNão se esqueça, o mais importante é espalhar amor e carinho! Que a diversão e o espírito de amizade marquem esse momento. 😄\n\nFeliz Amigo Secreto! 🎁🎉\n\nCom carinho,\nEquipe do Amigo Secreto`
             };
 
             await transporter.sendMail(mailOptions);
