@@ -102,7 +102,7 @@ function enviarEmails(dicSorteio){
         };
     }
 
-    fetch("challengesecretfriend.up.railway.app/enviar-email", {
+    fetch("https://challengesecretfriend.up.railway.app/enviar-email", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -111,5 +111,8 @@ function enviarEmails(dicSorteio){
     })
     .then(response => response.json())
     .then(data => alert(data.message))
-    .catch(error => console.error("Erro ao enviar e-mails:", error));
+    .catch(error => {
+        console.error("Erro ao enviar e-mails:", error);
+        response.text().then(text => console.log("Resposta do servidor:", text));
+    });
 }
