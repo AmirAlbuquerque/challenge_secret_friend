@@ -2,14 +2,14 @@ require("dotenv").config();
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
-app.use(cors({
-    origin: "*", // Permite todas as origens (apenas para testes, pode restringir depois)
-    methods: ["GET", "POST"]
-}));
 
 const app = express();
 app.use(express.json());
 app.use(cors()); // Permite requisições do frontend
+app.use(cors({
+    origin: "*", // Permite todas as origens (apenas para testes, pode restringir depois)
+    methods: ["GET", "POST"]
+}));
 
 // Configuração do Nodemailer (Gmail como exemplo)
 const transporter = nodemailer.createTransport({
