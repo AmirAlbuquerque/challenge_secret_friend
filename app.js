@@ -79,9 +79,11 @@ function sortearAmigo(amigos){
             }
             dicSorteio[listaSorteio[i]] = sorteado;
         }
-        if (verificacao) break;
-        let resultado = document.getElementById("resultado");
-        resultado = "Sorteio concluído!!"
+        if (verificacao){
+            let resultado = document.getElementById("resultado");
+            resultado.innerHTML = "Sorteio concluído!!"
+            break;
+        }
     } while(tentativa < 100);
 
     if (tentativa >= 100) {

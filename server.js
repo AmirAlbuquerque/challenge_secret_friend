@@ -33,7 +33,7 @@ app.post("/enviar-email", async (req, res) => {
                 from: process.env.EMAIL_USER,
                 to: email, // E-mail do destinatário
                 subject: "Sorteio de Amigo Secreto 🎁",
-                text: `Olá, ${nome}! 👋 \n\nO momento tão esperado chegou... e temos o resultado do seu amigo secreto! 🎉\n\nVocê tirou: ${sorteado}! 🤩\n\nAgora é hora de se preparar para a grande surpresa, que tal? \n💖 Que essa troca de presentes seja repleta de alegria e boas vibrações! 🌟\nNão se esqueça, o mais importante é espalhar amor e carinho! Que a diversão e o espírito de amizade marquem esse momento. 😄\n\nFeliz Amigo Secreto! 🎁🎉\n\nCom carinho,\nEquipe do Amigo Secreto`
+                text: `Olá, ${nome}! 👋 \n\nO momento tão esperado chegou... e temos o resultado do seu amigo secreto! 🎉\n\nVocê tirou: ${sorteado}! 🤩\n\nAgora é hora de se preparar para a grande surpresa, que tal? 💖 \nQue essa troca de presentes seja repleta de alegria e boas vibrações! 🌟\nNão se esqueça, o mais importante é espalhar amor e carinho! Que a diversão e o espírito de amizade marquem esse momento. 😄\n\nFeliz Amigo Secreto! 🎁🎉\n\nCom carinho,\nEquipe do Amigo Secreto`
             };
 
             await transporter.sendMail(mailOptions);
