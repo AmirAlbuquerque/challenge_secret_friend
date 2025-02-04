@@ -23,7 +23,7 @@
         <section class="input-section">
             <h2 class="section-title">Digite o nome dos seus amigos</h2>
             <div class="input-wrapper">
-                <input type="text" id="nome" class="input-name" placeholder="Digite um nome" onkeydown="if(event.key === 'Enter') adicionarAmigo()">
+                <input type="text" id="nome" class="input-name" placeholder="Digite o nome" onkeydown="if(event.key === 'Enter') adicionarAmigo()">
                 <input type="text" id="email" class="input-email" placeholder="Digite o e-mail" onkeydown="if(event.key === 'Enter') adicionarAmigo()">
                 <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
             </div>
@@ -42,11 +42,12 @@
                 </button>
             </div>
         </section>
+        <footer class = footer>
+            <p> Desenvolvido por <a href="https://www.linkedin.com/in/amir-albuquerque/" target="_blank">Amir Albuquerque</a> | Imagens obtido por 
+                <a href="https://br.freepik.com/" target="_blank">freepik</a> e <a href="https://pt.pngtree.com/" target="_blank">pngtree</a></p>
+        </footer>
     </main>
     <script src="app.js" defer></script>
-    <footer class = footer>
-        <p> Desenvolvido por <a href="https://www.linkedin.com/in/amir-albuquerque/" target="_blank">Amir Albuquerque</a> | Imagem obtido por 
-            <a href="https://br.freepik.com/" target="_blank">freepik</a> e <a href="https://pt.pngtree.com/" target="_blank">pngtree</a></p>
-    </footer>
+    
 </body>
 </html>

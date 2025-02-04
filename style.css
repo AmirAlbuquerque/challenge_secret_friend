@@ -49,7 +49,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     width: 100%;
 }
 
@@ -207,11 +207,10 @@ ul {
     text-align: center;
     font-size: 12px;
     margin-top: 20px;
-    padding: 10px;
-    position: absolute;
-    left: 0;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: var(--color-secondary);
 }
 
 .img-reduzida{
@@ -229,7 +228,7 @@ ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 40px 40px 0;
+        padding: 40px 40px 20px 40px;
     }
     .section-title{
         font-size: 30px;
@@ -251,6 +250,11 @@ ul {
         width: 100%;
         border-radius: 10px 10px 10px 10px;
         margin-top: 30px; /* Ajuste a distância conforme necessário */
+    }
+    .button-draw {
+        margin-bottom: 10 px;
+        padding: 15px;
+        font-size: 16px;
     }
     .img-reduzida{
         width: 150px;
