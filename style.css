@@ -2,8 +2,8 @@
     --color-primary: #4B69FD;
     --color-secondary: #FFF9EB;
     --color-tertiary: #5A5A5A;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
+    --color-button: #0406a8;
+    --color-button-hover: #6e9ffc;
     --color-text: #444444;
     --color-white: #FFFFFF;
 }
@@ -73,7 +73,7 @@ body {
 
 /* Contêineres de entrada e botão */
 .input-wrapper {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     width: 100%;
     max-width: 800px;
@@ -100,6 +100,7 @@ body {
 .button-container {
     width: 300px;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 /* Estilos de entrada de texto */
@@ -159,18 +160,23 @@ ul {
 
 /* Botão de sortear título */
 .button-draw {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
+    min-width: 340px;
     padding: 10px 40px;
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    font-weight: bold;
     transition: background 0.3s ease-in-out;
 }
 
 .button-draw img {
-    margin-right: 40px;
+    width: 30px;  /* Define a largura da imagem */
+    height: 30px; /* Define a altura da imagem */
+    margin-right: 20px;
 }
 
 .button-draw:hover {
@@ -218,13 +224,36 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .header-banner {
+        flex: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 40px 0;
+    }
+    .section-title{
+        font-size: 30px;
+    }
     .input-wrapper {
         flex-direction: column;
     }
     .input-name {
         width: 100%;
+        border: 2px solid #000;
+        border-radius: 10px 10px 10px 10px;
+    }
+    .input-email{
+        width: 100%;
+        border-radius: 10px 10px 10px 10px;
+        margin-top: 2px;
     }
     .button-add {
         width: 100%;
+        border-radius: 10px 10px 10px 10px;
+        margin-top: 30px; /* Ajuste a distância conforme necessário */
+    }
+    .img-reduzida{
+        width: 150px;
+        border-radius: 500px;
     }
 }
