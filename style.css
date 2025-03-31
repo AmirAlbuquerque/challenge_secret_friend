@@ -1,263 +1,267 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #5A5A5A;
-    --color-button: #0406a8;
-    --color-button-hover: #6e9ffc;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
+  --color-primary: #4b69fd;
+  --color-secondary: #fff9eb;
+  --color-tertiary: #5a5a5a;
+  --color-button: #0406a8;
+  --color-button-hover: #6e9ffc;
+  --color-text: #444444;
+  --color-white: #ffffff;
 }
 
 /* Estilos gerais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url("assets/background.png");
-    background-size: auto;
-    background-position: center top;
-    background-repeat: repeat;
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/background.png");
+  background-size: auto;
+  background-position: center top;
+  background-repeat: repeat;
 }
 
 .main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
 }
 
 /* Banner */
 .header-banner {
-    flex: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0 0;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 5px 0 5px;
+  gap: 20%;
 }
 
 /* Seção de entrada */
 .input-section {
-    flex: 60%;
-    background-color: var(--color-secondary);
-    border: 1px solid #000000;
-    border-radius: 64px 64px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 20px 0px 20px;
-    width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-secondary);
+  border: 1px solid #000000;
+  border-radius: 64px 64px 0 0;
+  padding: 20px;
 }
 
 /* Títulos */
 .main-title {
-    font-size: 60px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
+  display: flex;
+  font-size: 60px;
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--color-white);
 }
 
 .section-title {
-    font-family: "Inter", serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
-    text-align: center;
+  display: flex;
+  font-family: "Inter", serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 10px 0;
 }
 
 /* Contêineres de entrada e botão */
 .input-wrapper {
-    display: inline-flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 800px;
-    margin-top: 20px;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
 }
 
 .input-name {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 15px 0px 0px 15px;
-    font-size: 16px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 15px 0px 0px 15px;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .input-email {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    font-size: 16px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #000;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .button-container {
-    width: 300px;
-    justify-content: center;
-    margin-bottom: 30px;
+  display: flex;
+  max-width: 350px;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-/* Estilos de entrada de texto */
+/* Estilos de entrada de texto  VERIFICAR*/
 .input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #333;
+  border-right: none;
+  border-radius: 25px 0 0 25px;
+  font-family: "Merriweather", serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos de botão */
 button {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+  padding: 15px 30px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-white);
-    transition: background 0.3s ease-in-out;
-    border-radius: 0 15px 15px 0;
+  background-color: var(--color-tertiary);
+  color: var(--color-white);
+  transition: background 0.3s ease-in-out;
+  border-radius: 0 15px 15px 0;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
-    transform: scale(1.025);
-}
-
-/* Listas */
-ul {
-    list-style-type: none;
-    color: var(--color-text);
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    margin: 20px 0;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-}
-
-.result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-    border-style: hidden;
+  background-color: #a1a1a1;
+  transform: scale(1.025);
 }
 
 /* Botão de sortear título */
 .button-draw {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-width: 340px;
-    padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 16px;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 290px;
+  padding: 10px 40px;
+  color: var(--color-white);
+  background-color: var(--color-button);
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
 }
 
 .button-draw img {
-    width: 30px;  /* Define a largura da imagem */
-    height: 30px; /* Define a altura da imagem */
-    margin-right: 20px;
+  width: 30px; /* Define a largura da imagem */
+  height: 30px; /* Define a altura da imagem */
+  margin-right: 20px;
 }
 
 .button-draw:hover {
-    background-color: var(--color-button-hover);
-    transform: scale(1.025);
+  background-color: var(--color-button-hover);
+  transform: scale(1.025);
 }
 
-.sound-button {
-    position: absolute;
-    top: 10px;  /* Distância do topo */
-    right: 10px; /* Distância da direita */
-    background: white;
-    border: none;
-    cursor: pointer;
+/* Listas */
+ul {
+  list-style-type: none;
+  color: var(--color-text);
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  margin: 20px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
-.sound-button img {
-    width: 20px;  /* Ajuste o tamanho do ícone */
-    height: 20px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.sound-button:hover img {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+.result-list {
+  margin-top: 15px;
+  color: #05df05;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  border-style: hidden;
 }
 
 .footer {
-    text-align: center;
-    font-size: 12px;
-    margin-top: 20px;
-    position: fixed;
-    bottom: 0;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-secondary);
+}
+
+.img-reduzida {
+  width: 300px;
+  height: auto;
+  display: block;
+  /* margin-left: 75px; */
+  background-color: var(--color-secondary);
+  border-radius: 500px;
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-title {
+    font-size: 32px;
+  }
+
+  .header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 40px 20px 40px;
+  }
+  .section-title {
+    font-size: 30px;
+  }
+  .input-wrapper {
+    flex-direction: column;
+  }
+  .input-name {
     width: 100%;
-    background-color: var(--color-secondary);
-}
-
-.img-reduzida{
-    width: 300px;
-    height: auto;
-    display: block;
-    margin-left: 75px;
-    background-color: var(--color-secondary);
+    border: 2px solid #000;
+    border-radius: 10px 10px 10px 10px;
+  }
+  .input-email {
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 2px;
+  }
+  .button-add {
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 30px; /* Ajuste a distância conforme necessário */
+  }
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  .button-draw {
+    padding: 15px;
+    font-size: 16px;
+  }
+  .img-reduzida {
+    width: 150px;
     border-radius: 500px;
-}
-
-@media (max-width: 768px) {
-    .header-banner {
-        flex: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 40px 40px 20px 40px;
-    }
-    .section-title{
-        font-size: 30px;
-    }
-    .input-wrapper {
-        flex-direction: column;
-    }
-    .input-name {
-        width: 100%;
-        border: 2px solid #000;
-        border-radius: 10px 10px 10px 10px;
-    }
-    .input-email{
-        width: 100%;
-        border-radius: 10px 10px 10px 10px;
-        margin-top: 2px;
-    }
-    .button-add {
-        width: 100%;
-        border-radius: 10px 10px 10px 10px;
-        margin-top: 30px; /* Ajuste a distância conforme necessário */
-    }
-    .button-draw {
-        margin-bottom: 10 px;
-        padding: 15px;
-        font-size: 16px;
-    }
-    .img-reduzida{
-        width: 150px;
-        border-radius: 500px;
-    }
+  }
 }
