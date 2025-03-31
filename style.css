@@ -192,8 +192,9 @@ ul {
   margin-top: 20px;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   background-color: var(--color-secondary);
+  border: 1px solid #000000;
 }
 
 .img-reduzida {
@@ -208,7 +209,7 @@ ul {
 @media (max-width: 900px) {
   .main-content {
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -219,7 +220,6 @@ ul {
   }
 
   .header-banner {
-    flex: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,7 +232,6 @@ ul {
     flex-direction: column;
   }
   .input-name {
-    width: 100%;
     border: 2px solid #000;
     border-radius: 10px 10px 10px 10px;
   }
@@ -251,6 +250,7 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    height: 100vh;
   }
   .button-container {
     display: flex;
@@ -263,5 +263,8 @@ ul {
   .img-reduzida {
     width: 150px;
     border-radius: 500px;
+  }
+  .footer {
+    font-size: 10px;
   }
 }
